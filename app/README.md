@@ -36,4 +36,4 @@ Les jeux de mots sont produits automatiquement, nous n'appliquons aucun filtre. 
 
 Nous ne récoltons pas vos données personnelles mais les avis que vous laisserez seront stockés de manière anonyme sur un serveur du CNRS (nous ne pouvons donc pas rectifier un avis _a posteriori_).
 
-
+                
