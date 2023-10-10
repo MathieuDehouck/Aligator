@@ -1,8 +1,8 @@
-#AliGator, c'est quoi ?
+# AliGator, c'est quoi ?
 
 C'est un générateur automatique de jeux de mots à partir de prénom(s) en français. Un exemple typique de ce type de blague : la famille **GATOR** a un enfant, quel est son prénom ? **Ali**, parce que : **alligator**. 
 
-#Comment ça fonctionne ?
+# Comment ça fonctionne ?
 
 Cette première version (V1 : 20/06/2023) du générateur se base sur des critères phonétiques afin de générer automatiquement les jeux de mots. On utilise la liste des mots et locutions en français du Wiktionnaire anglais ainsi que leur prononciation (API) pour effectuer des alignements avec une liste de prénoms français et leur prononciation, aussi issus du [https://fr.wiktionary.org/wiki/Wiktionnaire:Page_d’accueil](Wiktionnaire) (cette liste est enrichie progressivement en fonction des manques remontés par les feedbacks). Les alignements sont réalisés à l'aide de _tries_ (arbres de préfixes) pour trouver les mots ou locutions dont la prononciation est alignée avec celle d'un prénom. Pour l'affichage des jeux de mots, il reste enfin à générer des noms de familles dont la prononciation en français correspond au reste du mot ou de la locution. Pour cela, nous avons appliqué une liste de règles générant des noms de famille avec différents niveaux de complexité. AliGator affichera de manière aléatoire l'un des noms de famille de complexité moindre.
 
@@ -14,13 +14,13 @@ Ce projet est toujours en cours de développement. Pour la prochaine version, le
 
 À plus long terme, nous envisageons de générer des jeux de mots à partir de plusieurs prénoms, comme : Anna, Lise, Mehdi CALE. Nous envisageons ensuite de relâcher les contraintes de prononciation pour produire des jeux de mots du type : Gordon ZOLA. Nous envisageons enfin une étape d'apprentissage automatique pour proposer des jeux de mots sans avoir à entrer manuellement de patron morphosyntaxique.
 
-#Pourquoi ce projet ?
+# Pourquoi ce projet ?
 
 Les jeux de mots ne sont pas le fort des IA génératives, encore moins lorsqu'ils sont basés sur des similarités phonétiques. AliGator propose de générer de manière automatique des jeux de mots à base de prénoms sans passer par une base de données de blagues.
 
 En plus de la génération automatique, l'un des objectifs de ce projet est de créer une ressource annotée manuellement de jeux de mots produits automatiquement. Une campagne d'annotation est par exemple envisagée pour cela. En attendant, le site permet aux utilisateur·ices d'effectuer un retour pour chaque jeu de mot proposé par AliGator en vue de nous aider à améliorer cet outil. Ce retour est similaire aux fonctions qui seront disponibles pour l'annotation ensuite. Cela concerne par exemple le niveau d'humour des jeux de mots, l'aspect sémantique (est-ce qu'il fait sens ?) ou éventuellement choquant ou explicite. Il est aussi possible de laisser un commentaire permettant d'expliquer le retour.
 
-#AliGator a été créé par qui ?
+# AliGator a été créé par qui ?
 
 [Mathieu Dehouck](https://www.lattice.cnrs.fr/membres/chercheurs-ou-enseignants-chercheurs/mathieu-dehouck/), chercheur au laboratoire Lattice-CNRS (UMR 8094).
 
@@ -28,11 +28,11 @@ En plus de la génération automatique, l'un des objectifs de ce projet est de c
 
 En suivant les liens sur nos noms, vous accéderez aux informations nécessaires pour nous contacter si besoin.
 
-#Avertissement
+# Avertissement
 
 Les jeux de mots sont produits automatiquement, nous n'appliquons aucun filtre. Ils peuvent donc éventuellement heurter la sensibilité de certaines personnes. Si vous générez des jeux de mots à partir de prénom(s), vous pouvez indiquer un contenu sensible ou explicite au moment du feedback.
 
-#Vos données
+# Vos données
 
 Nous ne récoltons pas vos données personnelles mais les avis que vous laisserez seront stockés de manière anonyme sur un serveur du CNRS (nous ne pouvons donc pas rectifier un avis _a posteriori_).
 
