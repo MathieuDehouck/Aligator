@@ -22,9 +22,9 @@ En plus de la génération automatique, l'un des objectifs de ce projet est de c
 
 #AliGator a été créé par qui ?
 
-[[Mathieu Dehouck]](https://www.lattice.cnrs.fr/membres/chercheurs-ou-enseignants-chercheurs/mathieu-dehouck/), chercheur au laboratoire Lattice-CNRS (UMR 8094).
+[Mathieu Dehouck](https://www.lattice.cnrs.fr/membres/chercheurs-ou-enseignants-chercheurs/mathieu-dehouck/), chercheur au laboratoire Lattice-CNRS (UMR 8094).
 
-[[Marine Delaborde]](https://www.cyu.fr/marine-delaborde), professeure junior au laboratoire LT2D (EA 7518) à CY Cergy Paris Université.
+[Marine Delaborde](https://www.cyu.fr/marine-delaborde), professeure junior au laboratoire LT2D (EA 7518) à CY Cergy Paris Université.
 
 En suivant les liens sur nos noms, vous accéderez aux informations nécessaires pour nous contacter si besoin.
 
