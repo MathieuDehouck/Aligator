@@ -1,39 +1,45 @@
-#AliGator, c'est quoi ?
+#What is AliGator?
 
-C'est un générateur automatique de jeux de mots à partir de prénom(s) en français. Un exemple typique de ce type de blague : la famille **GATOR** a un enfant, quel est son prénom ? **Ali**, parce que : **alligator**. 
+It's an automatic generator of puns based on French names: the **GATOR** family has a child, what's the child's name? **Ali**, because : **aligator**. 
 
-#Comment ça fonctionne ?
+#Why this projetc?
 
-Cette première version (V1 : 20/06/2023) du générateur se base sur des critères phonétiques afin de générer automatiquement les jeux de mots. On utilise la liste des mots et locutions en français du Wiktionnaire anglais ainsi que leur prononciation (API) pour effectuer des alignements avec une liste de prénoms français et leur prononciation, aussi issus du [https://fr.wiktionary.org/wiki/Wiktionnaire:Page_d’accueil](Wiktionnaire) (cette liste est enrichie progressivement en fonction des manques remontés par les feedbacks). Les alignements sont réalisés à l'aide de _tries_ (arbres de préfixes) pour trouver les mots ou locutions dont la prononciation est alignée avec celle d'un prénom. Pour l'affichage des jeux de mots, il reste enfin à générer des noms de familles dont la prononciation en français correspond au reste du mot ou de la locution. Pour cela, nous avons appliqué une liste de règles générant des noms de famille avec différents niveaux de complexité. AliGator affichera de manière aléatoire l'un des noms de famille de complexité moindre.
+Wordplays are not often well handed by generative artificial intelligences, even less so when based on phonetic similarities. AliGator proposes to automatically generate puns based on names, without using a joke database. 
 
-Ce site propose une fonctionnalité principale ([./prenom.html](le choix du prénom)) : l'utilisateur·ice peut entrer un prénom et demander à AliGator de générer les blagues qui contiennent ce prénom (nous n'en n'affichons que 5 de manière aléatoire car il est possible de les évaluer). Si le prénom proposé n'existe pas dans notre base de prénoms, l'utilisateur·ice peut l'ajouter en API (alphabet phonétique international) avec sa variante orthographique et ainsi obtenir les jeux de mots éventuels qui contiennent ce prénom.
+In addition to automatic generation, one of the aims of this project is to create a manually annotated resource of automatically generated puns. To this end, an annotation campaign (for example) is being considered. In the meantime, the website allows users to provide a feedback for each pun proposed by AliGator in order to help us to improve this tool. This feedback is similar to the functions that will be available for the annotation task afterwards. This concerns, for example, the level of humor of the puns, the semantic aspect (does it make sense?) or whether it's shocking or explicit. It is also possible to leave a comment explaining the feedback. 
 
-Deux fonctionnalités plus ludiques ont été prévues. La première, [./lea-toire.html](la génération aléatoire) de jeux de mots est déjà disponible. La seconde, [./top-5.html](le top 5) des blagues jugées les plus drôles, ne sera disponible que lorsque nous auront suffisamment de retours.
+#How does it work?
 
-Ce projet est toujours en cours de développement. Pour la prochaine version, les fonctions suivantes sont déjà implémentées mais pas encore disponibles sur ce site. On utilisera le lexique [https://repository.ortolang.fr/api/content/morphalou/2/LISEZ_MOI.html](Morphalou) comme source pour les mots (prononciation XSAMPA) et les informations morphologiques. On proposera ensuite aux utilisateur·ices de former des patrons morphosyntaxiques (du type DET NOM ADJ) pour afficher des jeux de mots qui respectent les règles d'accord en genre et en nombre (grâces aux informations issues de Morphalou).
+##Version currently deployed on the website (AliGator V1)
 
-À plus long terme, nous envisageons de générer des jeux de mots à partir de plusieurs prénoms, comme : Anna, Lise, Mehdi CALE. Nous envisageons ensuite de relâcher les contraintes de prononciation pour produire des jeux de mots du type : Gordon ZOLA. Nous envisageons enfin une étape d'apprentissage automatique pour proposer des jeux de mots sans avoir à entrer manuellement de patron morphosyntaxique.
+This first version (AliGator 1.0. : 20/06/2023) of the generator is based on phonetic criteria to automatically generate puns. The [https://en.wiktionary.org/wiki/Category:French_terms_with_IPA_pronunciation](list of French terms from the English Wiktionary) and their pronunciation(s) (in IPA, the International Phonetic Alphabet) are used to align with a  [https://en.wiktionary.org/wiki/Category:French_given_names](list of French names) and their pronunciation(s), also taken from the Wiktionary (this list of names is progressively enriched according to the shortcomings reported by feedbacks). Alignments are made using _tries_ (prefix trees) to find the terms whose pronunciation is aligned with that of a name. To display the puns, AliGator identifies and shows the names whose pronunciation in French matches the rest of the term. To achieve this, we applied a list of rules that generate surnames with different levels of complexity. AliGator randomly displays one of the less complex surnames.
 
-#Pourquoi ce projet ?
+This website offers one main feature ([./prenom.html](firstname choice)): the user can enter a first name and ask AliGator to generate puns containing that name (we only display 5 of them, for further annotation). If the proposed first name doesn't exist in our database, the user can add it in IPA with its spelling variant, and thus obtain any puns that contain this name. 
 
-Les jeux de mots ne sont pas le fort des IA génératives, encore moins lorsqu'ils sont basés sur des similarités phonétiques. AliGator propose de générer de manière automatique des jeux de mots à base de prénoms sans passer par une base de données de blagues.
+Two more playful features are also been designed. The first, [./lea-toire.html](random generation)  of puns is available. The second, [./top-5.html](the top 5) of the funniest jokes, will only be available when we have enough feedbacks.
 
-En plus de la génération automatique, l'un des objectifs de ce projet est de créer une ressource annotée manuellement de jeux de mots produits automatiquement. Une campagne d'annotation est par exemple envisagée pour cela. En attendant, le site permet aux utilisateur·ices d'effectuer un retour pour chaque jeu de mot proposé par AliGator en vue de nous aider à améliorer cet outil. Ce retour est similaire aux fonctions qui seront disponibles pour l'annotation ensuite. Cela concerne par exemple le niveau d'humour des jeux de mots, l'aspect sémantique (est-ce qu'il fait sens ?) ou éventuellement choquant ou explicite. Il est aussi possible de laisser un commentaire permettant d'expliquer le retour.
+AliGator 1.1. only displays lemmas. 
 
-#AliGator a été créé par qui ?
+##Next version, not deployed on the website (AliGator V2)
 
-[https://www.lattice.cnrs.fr/membres/chercheurs-ou-enseignants-chercheurs/mathieu-dehouck/](Mathieu Dehouck), chercheur au laboratoire Lattice-CNRS (UMR 8094).
+This project is still under development. For the next version, AliGator 2.0., the following functions are already implemented but not yet available on this website. The [https://repository.ortolang.fr/api/content/morphalou/2/LISEZ_MOI.html](Morphalou lexicon) will be used as a resource for terms (XSAMPA pronunciation) and morphological informations. Users will then be asked to form morphosyntactic patterns (such as _determiner_ _noun_ _adjective_) to display puns that respect gender and number agreement rules (using information from Morphalou).
 
-[https://www.cyu.fr/marine-delaborde](Marine Delaborde), professeure junior au laboratoire LT2D (EA 7518) à CY Cergy Paris Université.
+In the longer term, we plan to generate puns based on several firts names, such as: Anna, Lise, Mehdi CALE (in French: _analyses médicales_ for "mecical analyses"). We then plan to release the pronunciation constraints to produce puns such as: Gordon ZOLA. Finally, we are planning an automatic learning stage to provide word sets without having to manually enter morphosyntactic patterns.
 
-En suivant les liens sur nos noms, vous accéderez aux informations nécessaires pour nous contacter si besoin.
+#Who created AliGator?
 
-#Avertissement
+[https://www.lattice.cnrs.fr/membres/chercheurs-ou-enseignants-chercheurs/mathieu-dehouck/](Mathieu Dehouck), researcher at the Lattice-CNRS laboratory (UMR 8094).
 
-Les jeux de mots sont produits automatiquement, nous n'appliquons aucun filtre. Ils peuvent donc éventuellement heurter la sensibilité de certaines personnes. Si vous générez des jeux de mots à partir de prénom(s), vous pouvez indiquer un contenu sensible ou explicite au moment du feedback.
+[https://www.cyu.fr/marine-delaborde](Marine Delaborde), tenure track at the LT2D laboratory (EA 7518) at CY Cergy Paris Université.
 
-#Vos données
+By following these links on our names, you will access the necessary information to contact us if needed.
 
-Nous ne récoltons pas vos données personnelles mais les avis que vous laisserez seront stockés de manière anonyme sur un serveur du CNRS (nous ne pouvons donc pas rectifier un avis _a posteriori_).
+#Disclaimers
 
-                
+The puns are produced automatically, without any filter. This means puns generated by AliGator may offend some people's sensibilities. When generating puns from first name, you can indicate sensitive or explicit content in the feedback.
+
+Some phonetic transcription errors may come from the database used as a resource (Wiktionary or Morphalou, depending of the version). You can indicate them to us in the feedback so that we can correct them in our internal database.
+
+#Your data
+
+We don't collect your personal data, but any feedback you leave will be stored anonymously on a CNRS server (so we can't rectify a feedback _a posteriori_).

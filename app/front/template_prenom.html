@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>ALIGATOR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/aligator/styles/aligator.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/png" href="/aligator/styles/Logo/Social/Favicon/FaviconLogo.png"/>
+</head>
+
+<body>
+
+<!-- En-tête -->
+<header class="bandeau">
+  <img src="/aligator/styles/Logo/Social/Etsy/Cover.png">
+  <p>Un générateur automatique de jeux de mots pour la constitution de ressources pour le traitement automatique du langage naturel.</p>
+</header>
+<nav>
+	<a href="/aligator/main.html">Le projet</a>
+	<a href="/aligator/prenom.html">Choix du prénom</a>
+	<a href="/aligator/top5.html">Top 5</a>
+	<a href="/aligator/lea-toire.html">Les blagues à Léa Toire</a>
+	<a href="/aligator/credits.html">Crédits</a>
+	<div class="animation start-prenom"></div>
+</nav>
+
+<form class="prenom" action="/aligator/prenom.html" method="GET">
+  <p>Choisissez un prénom : <input type="text" name="name" placeholder="Prénom">
+      <!--button type="submit-prenom">Fais-moi rire !</button-->
+      <input type="submit" value="Faites moi rire !" /></p>
+</form>
+
+<div>
+
+  {% if jokes|length == 0 %}
+    {% if name|length == 0 %}
+
+    {% else %}
+      {% if found %}
+        <div class="description">
+	  <p> Je n'ai pas réussi à générer de blague avec le prénom "{{name}}", mais bientôt j'y arriverai. <br>
+	    En attendant, vous pouvez essayer avec un autre prénom.</p>
+	</div>
+
+	{% else %}
+	<div class="description">
+	  <p> Je ne connais pas le prénom "{{name}}", essayez en phonétique directement.</p>
+	</div>
+
+	<form class="prenom" action="/aligator/prenom.html" method="GET">
+	  <div class="clavier">
+	    <p>Le prénom n'est pas dans la base, écrivez-le en API, on l'y ajoutera :
+	      <input type="text" name="name" placeholder="En toutes lettres">
+	      <input type="text" id="prenom-api" name="nameapi" placeholder="pʁono~sjasjo~">
+	      <input type="submit" value="Fais-moi rire !"> </p>
+	    <ul id="keyboard"></ul>
+	    <script src="alphabet.js"></script>
+	    <button type="button" class="help" name="aide-api"
+		    onclick="window.open('https://fr.wikipedia.org/wiki/Aide:Alphabet_phonétique_français');">Aide API</button>
+	  </div>
+	</form>
+	
+      {% endif %}
+    {% endif %}
+  
+  {% else %}
+      {% for joke in jokes %}
+      <div class="resultats-prenom">
+	
+	<div class="output" id={{"joke_"+jokes[joke][2]}}>
+	  <p style="font-size:28px"> La famille <b>{{ joke }}</b> a un enfant. Quel est son prénom ? </p>
+	  <p style="font-size:18px; margin-top:-28px"> Prononciation : {{jokes[joke][3]}} </p>
+	  <details>
+	    <summary> Prénom </summary>
+	    {{ jokes[joke][0] }}
+	  </details>
+	  <details>
+	    <summary> Parce que </summary>
+	    {{ jokes[joke][1]|safe }}
+	  </details>
+	</div>
+
+	{% if jokes[joke][2] not in saved %}
+  	  <div class="feedback">
+	    <form class="feedback" name={{"feedback_"+jokes[joke][2]}} id={{"feedback_"+jokes[joke][2]}} method="GET">
+	      <div class="response">
+		
+		<input type="hidden" name="name" value={{name}}>
+		<input type="hidden" name="nameapi" value={{nameapi}}>
+		<input type="hidden" name="jokeid" value={{jokes[joke][2]}}>
+		<input type="hidden" name="saved" value={{saved}}>
+	      
+		<div class="rate" id="rating">
+		  <input type="radio" id={{"star5"+jokes[joke][2]}} name="rate" value="5" />
+		  <label for={{"star5"+jokes[joke][2]}} title="text">5 stars</label>
+		  <input type="radio" id={{"star4"+jokes[joke][2]}} name="rate" value="4" />
+		  <label for={{"star4"+jokes[joke][2]}} title="text">4 stars</label>
+		  <input type="radio" id={{"star3"+jokes[joke][2]}} name="rate" value="3" />
+		  <label for={{"star3"+jokes[joke][2]}} title="text">3 stars</label>
+		  <input type="radio" id={{"star2"+jokes[joke][2]}} name="rate" value="2" />
+		  <label for={{"star2"+jokes[joke][2]}} title="text">2 stars</label>
+		  <input type="radio" id={{"star1"+jokes[joke][2]}} name="rate" value="1" />
+		  <label for={{"star1"+jokes[joke][2]}} title="text">1 star</label>
+		</div>
+		<p class="legende"><font color="orange">1★</font> Pas une blague <font color="orange">&ensp; 2★</font> Nul <font color="orange">&ensp; 3★</font> Passable <font color="orange">&ensp; 4★</font> Pas mal <font color="orange">&ensp; 5★</font> Super </p>
+		<p>Je n'ai pas compris la blague<input type="checkbox" name="comp" value="pas compris"/></p>
+		<p>Contenu sensible / explicite <input type="checkbox" name="sensible" value="explicite"/></p>
+		<p>Remarque(s) : <input type="text" name="remarks"></p>
+		<input type="submit" name="submit" value="Envoyer l'avis !">
+	      </div>
+	    </form>
+	  </div>
+	  {% else %}
+	  <div class="description">
+	  <p> Vous avez déjà donné votre avis sur cette blague. Merci !</p>
+	  </div>
+	  {% endif %}
+      </div>
+      {% endfor %}
+    {% endif %}
+</div>
+
+
+<!-- Pied de page -->
+<footer>  
+ <p>Copyright © 2023.</p>
+</footer>
+</body>
+
+</html>

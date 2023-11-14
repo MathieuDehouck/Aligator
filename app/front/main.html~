@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>ALIGATOR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!/link href="styles/aligator.css" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('styles', path='/aligator.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- En-tête -->
+<header class="bandeau">
+  <img src="./styles/Logo/Social/Etsy/Cover.png">
+  <p>Un générateur automatique de jeux de mots pour la constitution de ressources pour le traitement automatique du langage naturel.</p>
+</header>
+
+<!-- Menu -->
+
+<!--
+<ul>
+    <li><a href="./main.html" class="actif">Le projet</a></li>
+    <li><a href="./prenom.html">Choix du prénom</a></li>
+    <li style="float:right"><a href="./top5.html">Top 5</a></li>
+    <li style="float:right"><a href="./lea-toire.html">Blague à Léa Toire</a></li>
+</ul>
+-->
+<nav>
+	<a href="./main.html">Le projet</a>
+	<!--a href="./prenom.html">Choix du prénom</a-->
+	<a href="/prenom">Choix du prénom</a>
+	<a href="./top5.html">Top 5</a>
+	<a href="./lea-toire.html">Blague à Léa Toire</a>
+	<a href="./contact.html">Contact</a>
+	<div class="animation start-home"></div>
+</nav>
+
+<div class="description">
+    <h1>Aligator, c'est quoi ?</h1>
+    <p>Un générateur automatique de jeux de mots à partir de prénom. </br>
+    Exemple : la famille Gator a un enfant, quel est son prénom ? </br>
+    Ali, parce que : aligator.</p>
+    
+    <h1>Comment ça fonctionne ?</h1>
+    <p>Créé à partir du corpus morphalou. Prends en compte des critères phonétiques et morphosyntaxiques.</p>
+    
+    <h1>Quels sont les objectifs ?</h1>
+    <p>Créer une ressource annotée manuellement de jeux de mots produits automatiquement.</p>
+    
+    <h1>Qui sont les auteurs ?</h1>
+    <p>Mathieu Dehouck (Lattice-CNRS UMR 8094) et Marine Delaborde (LT2D - CY Cergy Paris Université)</p>
+
+
+    <h1>Les blagues produites</h1>
+    <p>Automatiquement, pas de censure à ce niveau, c'est l'annotation qui le permettra.</p>
+    
+    <h1>Vos données</h1>
+    <p>Nous ne récoltons pas vos données.</p>
+</div>
+
+<!-- Pied de page -->
+<footer>  
+ <p>Mentions légales</p>
+</footer>
+</body>
+
+</html>

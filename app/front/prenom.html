@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>ALIGATOR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!/link href="styles/aligator.css" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('styles', path='/aligator.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- En-tête -->
+<header class="bandeau">
+  <img src="./styles/Logo/Social/Etsy/Cover.png">
+  <p>Un générateur automatique de jeux de mots pour la constitution de ressources pour le traitement automatique du langage naturel.</p>
+</header>
+<!-- Menu -->
+<!--
+<ul>
+    <li><a href="./main.html">Le projet</a></li>
+    <li><a href="./prenom.html" class="actif">Choix du prénom</a></li>
+    <li style="float:right"><a href="./top5.html">Top 5</a></li>
+    <li style="float:right"><a href="./lea-toire.html">Blague à Léa Toire</a></li>
+</ul>
+-->
+<nav>
+	<a href="./main.html">Le projet</a>
+	<a href="/prenom">Choix du prénom</a>
+	<a href="./top5.html">Top 5</a>
+	<a href="./lea-toire.html">Blague à Léa Toire</a>
+	<a href="./contact.html">Contact</a>
+	<div class="animation start-prenom"></div>
+</nav>
+
+<form class="prenom" action="/prenom" method="GET">
+    <label> 
+        <p>Choix du prénom : <input type="text" name="name"></p>
+    </label>
+    <div class="button">
+      <!--button type="submit-prenom">Fais-moi rire !</button-->
+      <input type="submit" value="Faites moi rire !" />
+    </div>
+</form>
+
+<div>
+  {% for joke in jokes %}
+  <div class="resultats-prenom">
+    <div class="output">
+      {{ joke|safe }}
+    </div>
+    <div class="feedback"> 
+      <div class="rating">
+	<p><!--
+	     --><a href="#5" title="Super">☆</a><!--
+						  --><a href="#4" title="Pas mal">☆</a><!--
+											 --><a href="#3" title="Passable">☆</a><!--
+																 --><a href="#2" title="Nul">☆</a><!--
+																				    --><a href="#1" title="Pas une blague">☆</a> Échelle de drôlerie</p>
+      </div>
+      <p>Pas compris <input type="checkbox" name="compréhension" value="pas compris"/></p>
+      <p>Contenu sensible / explicite <input type="checkbox" name="sensibilité" value="explicite"/></p>
+      <p>Remarque(s) : <input type="text" name="remarques"></p>
+      <div class="button">
+       	<button type="submit-feedback">Envoyer le feedback !</button>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+<!-- Pied de page -->
+<footer>  
+ <p>Mentions légales</p>
+</footer>
+</body>
+
+</html>

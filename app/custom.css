@@ -1,0 +1,35 @@
+/* This file intentionally left blank. */
+
+body {
+	background-color: #EEE3F1;
+}
+
+
+dl.py.class {
+	padding-top : 20px;
+}
+
+
+dl.py.method, dl.py.function {
+	padding-bottom : 20px;
+}
+
+
+dl.py.class > dt.sig.sig-object.py {
+	background-color : #C8E3DF;
+}
+
+.py.method > dt.sig.sig-object.py, .py.function > dt.sig.sig-object.py {
+	background-color : #D9F1ED;
+}
+
+span.pre {
+	color : #185759;
+}
+
+
+.body {
+	width: 90vw;
+    border: 0.15em solid #559092;
+    font-family: "Liberation Sans", sans-serif;
+}

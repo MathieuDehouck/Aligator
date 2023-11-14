@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>ALIGATOR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/aligator/styles/aligator.css" rel="stylesheet" type="text/css">
+<!--link href="../styles/aligator.css" rel="stylesheet" type="text/css"-->
+<link rel="icon" type="image/png" href="/aligator/styles/Logo/Social/Favicon/FaviconLogo.png" />
+</head>
+
+<body>
+
+<!-- En-tête -->
+<header class="bandeau">
+  <img src="/aligator/styles/Logo/Social/Etsy/Cover.png">
+  <p>Un générateur automatique de jeux de mots pour la constitution de ressources pour le traitement automatique du langage naturel.</p>
+</header>
+
+<!-- Menu -->
+
+<!--
+<ul>
+    <li><a href="./main.html" class="actif">Le projet</a></li>
+    <li><a href="./prenom.html">Choix du prénom</a></li>
+    <li style="float:right"><a href="./top5.html">Top 5</a></li>
+    <li style="float:right"><a href="./lea-toire.html">Blague à Léa Toire</a></li>
+</ul>
+-->
+<nav>
+	<a href="/aligator/main.html">Le projet</a>
+	<a href="/aligator/prenom.html">Choix du prénom</a>
+	<a href="/aligator/top5.html">Top 5</a>
+	<a href="/aligator/lea-toire.html">Les blagues à Léa Toire</a>
+	<a href="/aligator/credits.html">Crédits</a>
+	<div class="animation start-home"></div>
+</nav>
+
+<div class="description">
+    <h1>AliGator, c'est quoi&nbsp;?</h1>
+    <p>
+    C'est un générateur automatique de jeux de mots à partir de prénom(s) en français. Un exemple typique de ce type de blague&nbsp;: la famille <b>GATOR</b> a un enfant, quel est son prénom&nbsp;? <b>Ali</b>, parce que&nbsp;: <b>alligator</b>.
+    </p>
+    
+    <h1>Comment ça fonctionne&nbsp;?</h1>
+    <p>
+    Cette première version (V1&nbsp;: 20/06/2023) du générateur se base sur des critères phonétiques afin de générer automatiquement les jeux de mots. On utilise la liste des mots et locutions en français du <a href="https://fr.wiktionary.org/wiki/Wiktionnaire:Page_d’accueil">Wiktionnaire</a> anglais ainsi que leur prononciation (API) pour effectuer des alignements avec une liste de prénoms français et leur prononciation, aussi issus du Wiktionnaire (cette liste est enrichie progressivement en fonction des manques remontés par les feedbacks). Les alignements sont réalisés à l'aide de <i>tries</i> (arbres de préfixes) pour trouver les mots ou locutions dont la prononciation est alignée avec celle d'un prénom. Pour l'affichage des jeux de mots, il reste enfin à générer des noms de familles dont la prononciation en français correspond au reste du mot ou de la locution. Pour cela, nous avons appliqué une liste de règles générant des noms de famille avec différents niveaux de complexité. AliGator affichera de manière aléatoire l'un des noms de famille de complexité moindre.
+    </p>
+    
+    <p>
+    Ce site propose une fonctionnalité principale (<a href="./prenom.html">le choix du prénom</a>)&nbsp;: l'utilisateur·ice peut entrer un prénom et demander à AliGator de générer les blagues qui contiennent ce prénom (nous n'en n'affichons que 5 de manière aléatoire car il est possible de les évaluer). Si le prénom proposé n'existe pas dans notre base de prénoms, l'utilisateur·ice peut l'ajouter en API (alphabet phonétique international) avec sa variante orthographique et ainsi obtenir les jeux de mots éventuels qui contiennent ce prénom. 
+    </p>
+    
+    <p>
+    Deux fonctionnalités plus ludiques ont été prévues. La première, <a href="./lea-toire.html">la génération aléatoire</a> de jeux de mots est déjà disponible. La seconde, <a href="./top5.html">le top 5</a> des blagues jugées les plus drôles, ne sera disponible que lorsque nous auront suffisamment de retours. 
+    </p>
+    
+    <p>
+    Pour la prochaine version, les fonctions suivantes sont déjà implémentées mais pas encore disponibles sur ce site. On utilisera le lexique <a href="https://repository.ortolang.fr/api/content/morphalou/2/LISEZ_MOI.html">Morphalou</a> comme source pour les mots (prononciation XSAMPA) et les informations morphologiques. On proposera ensuite aux utilisateur·ices de former des patrons morphosyntaxiques (du type DET NOM ADJ) pour afficher des jeux de mots qui respectent les règles d'accord en genre et en nombre (grâces aux informations issues de Morphalou).
+    </p>
+    
+    <p>
+    À plus long terme, nous envisageons de générer des jeux de mots à partir de plusieurs prénoms, comme&nbsp;: Anna, Lise, Mehdi CALE. Nous envisageons ensuite de relâcher les contraintes de prononciation pour produire des jeux de mots du type&nbsp;: Gordon ZOLA. Nous envisageons enfin une étape d'apprentissage automatique pour proposer des jeux de mots sans avoir à entrer manuellement de patron morphosyntaxique. 
+    </p>
+    <!--
+    <p>V3&nbsp;: on extrait des séquences de parties du discours avec de l'information morphologique de <i>treebanks</i> (corpus arborés) de <a href="https://universaldependencies.org">Universal Dependencies</a> pour servir de colonnes vertébrales syntaxiques aux énoncés (cette fonctionnalité) et ainsi générer des jeux de mots sous forme de phrase.</p>
+    -->
+    
+    <h1>Pourquoi ce projet&nbsp;?</h1>
+    <p>
+    Les jeux de mots ne sont pas le fort des IA génératives, encore moins lorsqu'ils sont basés sur des similarités phonétiques. AliGator propose de générer de manière automatique des jeux de mots à base de prénoms sans passer par une base de données de blagues. 
+    </p>
+    <p>
+    En plus de la génération automatique, l'un des objectifs de ce projet est de créer une ressource annotée manuellement de jeux de mots produits automatiquement. Une campagne d'annotation est par exemple envisagée pour cela. En attendant, le site permet aux utilisateur·ices d'effectuer un retour pour chaque jeu de mot proposé par AliGator en vue de nous aider à améliorer cet outil. Ce retour est similaire aux fonctions qui seront disponibles pour l'annotation ensuite. Cela concerne par exemple le niveau d'humour des jeux de mots, l'aspect sémantique (est-ce qu'il fait sens ?) ou éventuellement choquant ou explicite. Il est aussi possible de laisser un commentaire permettant d'expliquer le retour. 
+    </p>
+    
+    <h1>AliGator a été créé par qui ? </h1>
+    <p>
+    <a href="https://www.lattice.cnrs.fr/membres/chercheurs-ou-enseignants-chercheurs/mathieu-dehouck/" target="_blank">Mathieu Dehouck</a>, chercheur au laboratoire Lattice-CNRS (UMR 8094).
+    </p>
+    <p>
+    <a href="https://www.cyu.fr/marine-delaborde" target="_blank">Marine Delaborde</a>, professeure junior au laboratoire LT2D (EA 7518) à CY Cergy Paris Université. 
+    </p>
+    <p>
+    En suivant les liens sur nos noms, vous accéderez aux informations nécessaires pour nous contacter si besoin. 
+    </p>
+    
+    <h1>Avertissement</h1>
+    <p>
+    Les jeux de mots sont produits automatiquement, nous n'appliquons aucun filtre. Ils peuvent donc éventuellement heurter la sensibilité de certaines personnes. Si vous générez des jeux de mots à partir de prénom(s), vous pouvez indiquer un contenu sensible ou explicite au moment du feedback. 
+    </p>
+    
+    <h1>Vos données</h1>
+    <p>Nous ne récoltons pas vos données personnelles mais les avis que vous laisserez seront stockés de manière anonyme sur un serveur du CNRS (nous ne pouvons donc pas rectifier un avis <i>a posteriori</i>).</p>
+</div>
+
+<!-- Pied de page -->
+<footer>  
+ <p>Copyright © 2023.</p>
+</footer>
+</body>
+
+</html>

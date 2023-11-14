@@ -1,0 +1,315 @@
+body {
+  width: 90vw;
+  margin: auto;
+  background-color: #C8E3DF;
+  border: 0.15em solid #559092;
+  font-family: "Liberation Sans", sans-serif;
+}
+
+h1 {
+  color: #591857;
+  font-size: 1.2em;
+}
+
+h2 {
+  color: #591857;
+  font-size: 1em;
+  padding:1em 0em 0em 0em;
+}
+
+h1, h2[class~="credits"]{
+    text-align: center;
+}
+
+p, details, li {
+  color: #185759;
+  /*font-size: 0.8em;*/
+  font-size: 1em;
+}
+
+header { 
+    text-align: center;
+}
+
+header img { 
+    width: 60vw;
+    vertical-align: middle;  
+}
+
+header p { 
+    text-align: center;
+    font-size: 1.3vw;
+    color:  #559092;
+}
+
+footer { 
+    margin: 5em 0em 0em 0em;
+    padding: 1vw;
+    background-color: #185759;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.7em;
+    color: white;
+}
+
+nav {
+	margin: 5vw auto 0;
+	position: relative;
+	width: 85vw;
+	height: 10em;
+	background-color: #185759;
+	border-radius: 1vw;
+	font-size: 0.5vw;
+}
+nav a {
+    line-height: 3em ;
+	font-size: 3.2em;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+nav .animation {
+	position: absolute;
+	height: 10em;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 1vw;
+}
+
+a:nth-child(1) {
+	width: 17vw;
+}
+a:nth-child(2) {
+	width: 17vw;
+}
+a:nth-child(3) {
+	width: 17vw;
+}
+a:nth-child(4) {
+	width: 17vw;
+}
+a:nth-child(5) {
+	width: 16vw;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 17vw;
+	left: 0vw;
+	background-color: #559092;
+}
+
+nav .start-prenom, a:nth-child(2):hover~.animation {
+	width: 17vw;
+	left: 17vw;
+	background-color: #559092;
+}
+
+nav .start-top, a:nth-child(3):hover~.animation {
+	width: 17vw;
+	left: 34vw;
+	background-color: #559092;
+}
+
+nav .start-toire, a:nth-child(4):hover~.animation {
+	width: 19vw;
+	left: 50vw;
+	background-color: #559092;
+}
+
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 16vw;
+	left: 69vw;
+	background-color: #559092;
+}
+
+.description, .output{ 
+    text-align: justify;
+    margin: 8vw;
+}
+
+.description p, .credits p {
+    line-height: 2em;
+    font-size: 1em;
+}
+
+.description a {
+    color: #591857;
+}
+
+.prenom, .top, .toire { 
+    text-align: center;
+    /*border: 0.005em solid #559092;*/
+    margin: 5em auto;
+}
+
+.credits { 
+    text-align: justify;
+    /*border: 0.005em solid #559092;*/
+    margin: 8vw;
+}
+
+.clavier, .feedback {
+    text-align: center;
+}
+
+/*
+.rating {
+   direction: rtl;
+}
+
+.rating a {
+   color: #aaa;
+   text-decoration: none;
+   font-size: 2em;
+   transition: color .4s;
+   line-height: 0.5em;
+}
+
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+   color: orange;
+   cursor: pointer;
+}
+*/
+
+.legende {
+   font-size: 0.75em;
+}
+
+table {
+    margin: 2em  auto;
+}
+
+.help {
+    margin: 0em 0em 2em 0em;
+}
+
+#keyboard {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 3em 2em 3em;
+  text-align: center;
+}
+
+#keyboard li {
+  display: inline-block;
+  margin: 0.1em;
+  padding: 0.5em;
+  border: 0.1em solid #559092;
+  cursor: pointer;
+}
+
+button, input[type=submit] {
+  background-color: white;
+  border: 0.2em solid #559092;
+  color: #591857;
+  padding: 0.2em 0.6em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 1em;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #559092;
+    color: white;
+}
+
+/*À partir d'ici, mettre des valeurs relatives (soit "em" par rapport à l'élément supérieur, soit "vw" ou "vh" pour la largeur et la hauteur par rapport au viewport). Avant cette ligne c'est ok normalement.*/
+
+details {
+  font-size: 28px; /*ici*/
+}
+
+details > summary{
+  font-size: 18px; /*ici*/
+}
+
+/* for the new star system */
+
+/**{
+    margin: 0;
+    padding: 0;
+}*/
+
+.rate {
+	text-align:center;
+    height: 3em; /*ici*/
+    /*padding: 0 39vw; /*ici*/
+    width: fit-content;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.rate:not(:checked) > input {
+    position:absolute;
+    /*left:-9999px; /*ici*/
+    display:none;
+}
+
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px; /*ici*/
+    color:#ccc;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★ ';
+    text-align: center;
+}
+
+.rate > input:checked ~ label {
+	color: #ffc700;    
+}
+
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/*Vérifier si c'est toujours pertinent de laisser ça*/
+@media screen and (max-device-width: 480px) {
+    body {
+	margin: auto;
+	background-color: #C8E3DF;
+	/*background-color: #C8Ef5F;*/
+	border: 0.2em solid #559092; /*là j'ai changé mais à vérifier*/
+	font-family: sans-serif;
+    }
+    
+    header p {
+		font-size:1em;
+	}
+	
+	header img {
+	    width: 80vw;
+    	vertical-align: middle;
+	}
+	
+}
