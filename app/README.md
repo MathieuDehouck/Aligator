@@ -10,15 +10,17 @@ In addition to automatic generation, one of the aims of this project is to creat
 
 #How does it work?
 
-##Version currently deployed on the website (AliGator V1)
+##Version currently deployed on the website (AliGator V1.1)
 
 This first version (AliGator 1.0. : 20/06/2023) of the generator is based on phonetic criteria to automatically generate puns. The [https://en.wiktionary.org/wiki/Category:French_terms_with_IPA_pronunciation](list of French terms from the English Wiktionary) and their pronunciation(s) (in IPA, the International Phonetic Alphabet) are used to align with a  [https://en.wiktionary.org/wiki/Category:French_given_names](list of French names) and their pronunciation(s), also taken from the Wiktionary (this list of names is progressively enriched according to the shortcomings reported by feedbacks). Alignments are made using _tries_ (prefix trees) to find the terms whose pronunciation is aligned with that of a name. To display the puns, AliGator identifies and shows the names whose pronunciation in French matches the rest of the term. To achieve this, we applied a list of rules that generate surnames with different levels of complexity. AliGator randomly displays one of the less complex surnames.
+
 
 This website offers one main feature ([./prenom.html](firstname choice)): the user can enter a first name and ask AliGator to generate puns containing that name (we only display 5 of them, for further annotation). If the proposed first name doesn't exist in our database, the user can add it in IPA with its spelling variant, and thus obtain any puns that contain this name. 
 
 Two more playful features are also been designed. The first, [./lea-toire.html](random generation)  of puns is available. The second, [./top-5.html](the top 5) of the funniest jokes, will only be available when we have enough feedbacks.
 
 AliGator 1.1. only displays lemmas. 
+
 
 ##Next version, not deployed on the website (AliGator V2)
 
@@ -33,6 +35,7 @@ In the longer term, we plan to generate puns based on several firts names, such 
 [https://www.cyu.fr/marine-delaborde](Marine Delaborde), tenure track at the LT2D laboratory (EA 7518) at CY Cergy Paris Université.
 
 By following these links on our names, you will access the necessary information to contact us if needed.
+
 
 #Disclaimers
 
