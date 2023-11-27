@@ -12,25 +12,25 @@ In addition to automatic generation, one of the aims of this project is to creat
 
 ## Version currently deployed on the website (AliGator V1.1)
 
-This first version (AliGator 1.0. : 20/06/2023) of the generator is based on phonetic criteria to automatically generate puns. The [list of French terms from the English Wiktionary](https://en.wiktionary.org/wiki/Category:French_terms_with_IPA_pronunciation) and their pronunciation(s) (in IPA, the International Phonetic Alphabet) are used to align with a [https://en.wiktionary.org/wiki/Category:French_given_names](list of French names) and their pronunciation(s), also taken from the Wiktionary (this list of names is progressively enriched according to the shortcomings reported by feedbacks). Alignments are made using _tries_ (prefix trees) to find the terms whose pronunciation is aligned with that of a name. To display the puns, AliGator identifies and shows the names whose pronunciation in French matches the rest of the term. To achieve this, we applied a list of rules that generate surnames with different levels of complexity. AliGator randomly displays one of the less complex surnames.
+This first version (AliGator 1.0. : 20/06/2023) of the generator is based on phonetic criteria to automatically generate puns. The [list of French terms from the English Wiktionary](https://en.wiktionary.org/wiki/Category:French_terms_with_IPA_pronunciation) and their pronunciation(s) (in IPA, the International Phonetic Alphabet) are used to align with a [list of French names](https://en.wiktionary.org/wiki/Category:French_given_names) and their pronunciation(s), also taken from the Wiktionary (this list of names is progressively enriched according to the shortcomings reported by feedbacks). Alignments are made using _tries_ (prefix trees) to find the terms whose pronunciation is aligned with that of a name. To display the puns, AliGator identifies and shows the names whose pronunciation in French matches the rest of the term. To achieve this, we applied a list of rules that generate surnames with different levels of complexity. AliGator randomly displays one of the less complex surnames.
 
-This website offers one main feature ([./prenom.html](firstname choice)): the user can enter a first name and ask AliGator to generate puns containing that name (we only display 5 of them, for further annotation). If the proposed first name doesn't exist in our database, the user can add it in IPA with its spelling variant, and thus obtain any puns that contain this name. 
+This website offers one main feature ([firstname choice](./prenom.html)): the user can enter a first name and ask AliGator to generate puns containing that name (we only display 5 of them, for further annotation). If the proposed first name doesn't exist in our database, the user can add it in IPA with its spelling variant, and thus obtain any puns that contain this name. 
 
-Two more playful features are also been designed. The first, [./lea-toire.html](random generation)  of puns is available. The second, [./top-5.html](the top 5) of the funniest jokes, will only be available when we have enough feedbacks.
+Two more playful features are also been designed. The first, [random generation](./lea-toire.html)  of puns is available. The second, [the top 5](./top-5.html) of the funniest jokes, will only be available when we have enough feedbacks.
 
 AliGator 1.1. only displays lemmas. 
 
 ## Next version, not deployed on the website (AliGator V2)
 
-This project is still under development. For the next version, AliGator 2.0., the following functions are already implemented but not yet available on this website. The [https://repository.ortolang.fr/api/content/morphalou/2/LISEZ_MOI.html](Morphalou lexicon) will be used as a resource for terms (XSAMPA pronunciation) and morphological informations. Users will then be asked to form morphosyntactic patterns (such as _determiner_ _noun_ _adjective_) to display puns that respect gender and number agreement rules (using information from Morphalou).
+This project is still under development. For the next version, AliGator 2.0., the following functions are already implemented but not yet available on this website. The [Morphalou lexicon](https://repository.ortolang.fr/api/content/morphalou/2/LISEZ_MOI.html) will be used as a resource for terms (XSAMPA pronunciation) and morphological informations. Users will then be asked to form morphosyntactic patterns (such as _determiner_ _noun_ _adjective_) to display puns that respect gender and number agreement rules (using information from Morphalou).
 
 In the longer term, we plan to generate puns based on several firts names, such as: Anna, Lise, Mehdi CALE (in French: _analyses médicales_ for "mecical analyses"). We then plan to release the pronunciation constraints to produce puns such as: Gordon ZOLA. Finally, we are planning an automatic learning stage to provide word sets without having to manually enter morphosyntactic patterns.
 
 # Who created AliGator?
 
-[https://www.lattice.cnrs.fr/membres/chercheurs-ou-enseignants-chercheurs/mathieu-dehouck/](Mathieu Dehouck), researcher at the Lattice-CNRS laboratory (UMR 8094).
+[Mathieu Dehouck](https://www.lattice.cnrs.fr/membres/chercheurs-ou-enseignants-chercheurs/mathieu-dehouck/), researcher at the Lattice-CNRS laboratory (UMR 8094).
 
-[https://www.cyu.fr/marine-delaborde](Marine Delaborde), tenure track at the LT2D laboratory (EA 7518) at CY Cergy Paris Université.
+[Marine Delaborde](https://www.cyu.fr/marine-delaborde), tenure track at the LT2D laboratory (EA 7518) at CY Cergy Paris Université.
 
 By following these links on our names, you will access the necessary information to contact us if needed.
 
