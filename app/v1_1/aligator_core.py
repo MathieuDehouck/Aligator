@@ -28,7 +28,7 @@ def initialize():
     # loading names
     names = {}
     revnames = {}
-    f = open('app/resources/names_IPA')
+    f = open('../../app/resources/names_IPA')
     for l in tqdm(f, leave=False):
         l = l.strip().split('\t')
         for c in discard:
@@ -54,7 +54,7 @@ def initialize():
     # loading words
     words = {}
     #f = open('../french_IPA')
-    f = open('app/resources/french_lem_only')
+    f = open('../../app/resources/french_lem_only')
     for l in tqdm(f, leave=False):
         if l[0] == '-' or '/' in l:
             continue
