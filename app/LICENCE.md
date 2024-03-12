@@ -18,7 +18,7 @@ Le code de l'application AliGator 1.1. est disponible sur GitHub à l'adresse su
 
 ## Ressources
 
-Le code a été conçu pour utiliser des ressources externes pour les termes et prénoms ainsi que leur(s) prononciation(s) : voir [https://apps.lattice.cnrs.fr/aligator/main.html](LISEZ-MOI.md) pour en savoir plus. Ces ressources ne sont pas intégrées directement dans le code qui est diffusé publiquement sur GitHub, mais à part. 
+Le code a été conçu pour utiliser des ressources externes pour les termes et prénoms ainsi que leur(s) prononciation(s) : voir [LISEZ-MOI.md](LISEZ-MOI.md) pour en savoir plus. Ces ressources ne sont pas intégrées directement dans le code qui est diffusé publiquement sur GitHub, mais à part. 
 
 Le code de AliGator 1.1. utilise le Wiktionnaire comme ressource extérieure pour les termes, les prénoms et leur(s) prononciation(s). Nous avons effectué quelques modifications sur cette ressource. Le dépôt GitHub contient la ressource originale et la ressource modifiée. Ces deux fichiers sont sous licence CC-BY-SA. Les jeux de mots produits par Aligator 1.1. sont sous licence CC-BY-SA. 
 
