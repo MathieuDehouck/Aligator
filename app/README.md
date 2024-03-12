@@ -2,7 +2,7 @@
 
 It's an automatic generator of puns based on French names: the **GATOR** family has a child, what's the child's name? **Ali**, because : **aligator**. 
 
-# Why this projetc?
+# Why this project?
 
 Wordplays are not often well handed by generative artificial intelligences, even less so when based on phonetic similarities. AliGator proposes to automatically generate puns based on names, without using a joke database. 
 
@@ -24,7 +24,7 @@ AliGator is also downloadable at the following address : [https://github.com/Ma
 
 ##Next version, not deployed on the website (AliGator V2)
 
-This project is still under development. For the next version, AliGator 2.0., the following functions are already implemented but not yet available on this website or GitHub. The [https://repository.ortolang.fr/api/content/morphalou/2/LISEZ_MOI.html](Morphalou lexicon) will be used as a resource for terms (XSAMPA pronunciation) and morphological informations. In this version, the puns will no longer simply concern a single lemma, but will form morphosyntactic patterns (such as _determiner_ _noun_ _adjective_) that respect gender and number agreement rules (using information from Morphalou).
+This project is still under development. For the next version, AliGator 2.0., the following functions are already implemented but not yet available on this website or GitHub. The [Morphalou lexicon](https://repository.ortolang.fr/api/content/morphalou/2/LISEZ_MOI.html) will be used as a resource for terms (XSAMPA pronunciation) and morphological informations. In this version, the puns will no longer simply concern a single lemma, but will form morphosyntactic patterns (such as _determiner_ _noun_ _adjective_) that respect gender and number agreement rules (using information from Morphalou).
 
 In the longer term, we plan to generate puns based on several firts names, such as: Anna, Lise, Mehdi CALE (in French: _analyses médicales_ for "mecical analyses"). We then plan to release the pronunciation constraints to produce puns such as: Gordon ZOLA. Finally, we are planning an automatic learning stage to provide word sets without having to manually enter morphosyntactic patterns.
 
