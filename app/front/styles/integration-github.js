@@ -1,4 +1,4 @@
-fetch('https://raw.githubusercontent.com/MathieuDehouck/Aligator/main/app/README.md')
+fetch('https://raw.githubusercontent.com/MathieuDehouck/Aligator/main/README.md')
   .then(response => {
     if (!response.ok) {
       throw new Error('La requête n\'a pas abouti. Assurez-vous que le dépôt Github et le fichier README existent et sont publics.');
