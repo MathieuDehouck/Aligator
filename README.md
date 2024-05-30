@@ -2,7 +2,7 @@
 
 It's an automatic generator of puns based on French names: the **GATOR** family has a child, what's the child's name? **Ali**, because : **aligator**. 
 
-# Why this projetc?
+# Why this project?
 
 Wordplays are not often well handed by generative artificial intelligences, even less so when based on phonetic similarities. AliGator proposes to automatically generate puns based on names, without using a joke database. 
 
